@@ -1,0 +1,23 @@
+PREREQUISITE
+		
+1) setup docker-compose first
+2) make sure your 3306 port is free (mysql service is stop)
+
+RUN THE FOLLOWING COMMAND
+
+1) sudo docker-compose build
+2) sudo docker-compose up
+
+
+UNDERSTANDING
+
+1)container port 8080 bind with local 80, so you can call APIs like
+	1) http://localhost:80/count?producer=500&consumer=600
+	2) http://localhost:80/count/40
+
+2) there are two table
+	1) count_table: to save the count and 0 or 100 value
+	2) request_info: to persist the request.
+
+
+Please let me know if you have any kind of question
